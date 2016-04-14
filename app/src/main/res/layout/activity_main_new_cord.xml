@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".screens.MainActivity">
+
+    <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/linePb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminate="true"
+        app:spb_sections_count="4"
+        app:spb_color="@color/colorMaterialRed"
+        app:spb_colors="@array/colorsArray2"
+        app:spb_speed="2.0"
+        app:spb_stroke_width="8dp"
+        app:spb_stroke_separator_length="0dp"
+        app:spb_reversed="false"
+        app:spb_mirror_mode="false"
+        app:spb_progressiveStart_activated="true"
+        app:spb_progressiveStart_speed="1.5"
+        app:spb_progressiveStop_speed="3.4"
+        />
+
+    <RelativeLayout
+        android:id="@+id/child"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.dj.infilectmission.utils.SnackBarBehaviour">
+
+        <co.devcenter.android.ChatView
+            android:id="@+id/chat_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:inputBackgroundColor="@android:color/transparent"
+            app:inputBarBackgroundColor="@color/white"
+            app:inputBarInsetBottom="8dp"
+            app:inputBarInsetTop="8dp"
+            app:inputElevation="0dp"
+            app:inputTextColor="@color/colorBlackDimText"
+            app:inputTextSize="18sp"
+            app:sendBtnBackgroundTint="@color/blue"
+            app:sendBtnElevation="0dp"
+            app:sendBtnIconTint="@color/white" />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
